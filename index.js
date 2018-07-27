@@ -123,9 +123,9 @@ class MagentoTwo {
         uri: uri,
         method: method,
         headers: headers,
-        rejectUnauthorized: false,
         qs: params,
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
+        strictSSL: false
       }, (err, response, body) => {
         if(err) reject(err);
         let returnValue = body;
