@@ -120,7 +120,7 @@ class MagentoTwo {
     }
 
     if(this.options && this.options.headers) {
-      headers = deepmerge(headers, thi.options.headers);
+      headers = deepmerge(headers, this.options.headers);
     }
 
     return new Promise((resolve, reject) => {
