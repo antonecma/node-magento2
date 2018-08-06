@@ -118,6 +118,11 @@ class MagentoTwo {
     if(this.authKey) {
       headers.Authorization = 'Bearer '+this.authKey;
     }
+
+    if(this.options && this.options.headers) {
+      headers = deepmerge(headers, thi.options.headers);
+    }
+
     return new Promise((resolve, reject) => {
       request({
         uri: uri,
